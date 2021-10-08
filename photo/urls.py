@@ -7,5 +7,6 @@ app_name = 'photo'
 
 urlpatterns = [
     path('', photo_list, name='photo_list'),
-    path('upload/', PhotoUpdateView.as_view(), name="photo_upload"),
+    path('upload/', PhotoUpdateView.as_view(), name='photo_upload'),
+    path('delete/<int:pk>/', PhotoDeleteView.as_view(), name='photo_delete'),
 ]

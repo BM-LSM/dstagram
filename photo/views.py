@@ -24,3 +24,9 @@ class PhotoUpdateView(CreateView):
             return redirect('/')
         else:
             return self.render_to_response({'form':form})
+
+
+class PhotoDeleteView(DeleteView):
+    model = Photo
+    success_url = '/'
+    template_name = 'photo/delete.html'
