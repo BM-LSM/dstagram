@@ -11,7 +11,7 @@ def photo_list(request):
     photos = Photo.objects.all()
     return render(request, 'photo/list.html', {'photos':photos})
 
-class PhotoUpdateView(CreateView):
+class PhotoUploadView(CreateView):
     model = Photo
     fields = ['photo', 'text'] # 작성자와 작성시간은 자동으로 처리
     template_name = 'photo/upload.html'
