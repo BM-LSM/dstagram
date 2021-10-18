@@ -8,7 +8,7 @@ class RegisterForm(forms.ModelForm):
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Repeat Password', widget=forms.PasswordInput)
     class Meta:
-        moder = User
+        model = User
         fields = ['username', 'first_name', 'last_name', 'email']
 
     def clean_password2(self):
