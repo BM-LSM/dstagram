@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'photo',
     'accounts',
+    'disqus',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
@@ -128,9 +130,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # reverse_lazy 함수를 사용해서 다른뷰를 적용할 수 있다
 LOGIN_REDIRECT_URL = '/'
 
+DISQUS_WEBSITE_SHORTNAME = 'esmin1'
+SITE_ID = 1
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
